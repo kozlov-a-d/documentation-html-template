@@ -4,6 +4,48 @@
     position: relative;
 }
 
+.section, .welcome {
+    padding: 10px 0  180px;
+}
+
+.section h2{
+    padding: 20px 0 0;
+    font-size: 4.125rem;
+    line-height: 4.063rem;
+    font-weight: 300;
+}
+.section h2:after{
+    content: '';
+    display: block;
+    width: 130px;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    border-width: 1px;
+    border-color: #030303;
+
+}
+.section h3{
+    font-size: 3.4rem;
+    padding: 15px 0 0;
+}
+.section h4{
+    padding: 10px 0 0;
+}
+.section p{
+    padding: 0;
+    margin: 10px 0 10px;
+}
+.section p,
+.section h2,
+.section h3,
+.section h4{
+    padding: 0;
+    margin: 5px 0 5px;
+}
+
 .sub-title {
     font-size: 30px;
     margin-top: 50px;

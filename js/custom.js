@@ -78,4 +78,27 @@
         $(this).parent().addClass('active');
     });
 
+    /* ==============================================
+    MARKDOWN -->
+    =============================================== */
+
+    $('.js-markdown-block').each(function() {
+        var $this = $(this);
+        $.ajax({
+            url: $this.data('url'),
+            dataType: "text",
+            async: true,
+            success: function(msg){
+                var html = markdown.toHTML(msg);
+                var $html = $(html);
+                $this.html($html);
+                $html.find('code').each(function () {
+                    $(this).replaceWith(function(){
+                        return '<pre class="brush: ' + $this.data('type') +  '">'+$(this).html()+'</pre>';
+                    });
+                });
+            }
+        });
+    });
+
 })(jQuery);
