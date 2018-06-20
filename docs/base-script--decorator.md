@@ -33,3 +33,4 @@ input.addEventListener('keydown', function() {
 });
 ```
 
+###throttle
