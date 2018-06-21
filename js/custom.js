@@ -97,6 +97,9 @@
                         return '<pre class="brush: ' + $this.data('type') +  '">'+$(this).html()+'</pre>';
                     });
                 });
+                $html.find('a').each(function () {
+                    $(this).attr('target', '_blank');
+                });
             }
         });
     });
