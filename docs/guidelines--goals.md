@@ -78,15 +78,15 @@ $('body').on('click', 'a[href^="tel:"]', function(){
 
 Выполнение целей яндекс.метрики можно проверять добавив *?_ym_debug=1*  к урлу.
 например 
-> http://norma-l.ru/sdelat_zakaz.html?_ym_debug=1
+> http://example.com/?_ym_debug=1
 
 Если всё хорошо, то при выполении цели в консольке должно появиться примерно такое сообщение
-> Reach goal. Counter: 27355607. Goal id: ZAJAVKA.
+> Reach goal. Counter: 27355607. Goal id: Feedback.
 
 ### Отправка форм, на нашей CMS (v5.x)
 
-На наших сайтах все формы отправляются аяксом благодаря этому скрипту это скрипт [form.js](https://git.darvins.ru/darvin-cms/skeleton/blob/master/assets/scripts/form.js)
-При успехе там выстреливает событие app.form.success, которое содержит информацию о форме. Это событие прослушивается в скрипте для целей [goals.js](https://git.darvins.ru/darvin-cms/skeleton/blob/master/assets/scripts/goals.js)
+На наших сайтах все формы отправляются аяксом благодаря этому скрипту [form.js](https://git.darvins.ru/darvin-cms/skeleton/blob/master/assets/scripts/form.js).
+При успешной отправке формы скрипт выстреливает событие **app.form.success**, которое содержит информацию о форме. Это событие прослушивается в скрипте для целей [goals.js](https://git.darvins.ru/darvin-cms/skeleton/blob/master/assets/scripts/goals.js)
 
 Если форме задать название и категорию цели через дата атрибут, тогда в goals.js автоматически отработает цель с таким именем и категорией
 ```
